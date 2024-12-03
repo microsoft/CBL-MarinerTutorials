@@ -40,6 +40,9 @@ ls CBL-MarinerTutorials/build-in-container/out/RPMS/x86_64/
 #  Run the tools manually
 make build-packages SRPM_PACK_LIST="hello_world_demo" -j$(nproc)
 
+# Clean up Mariner workspace, and docker image and container. This requires root privileges
+sudo ./CBL-MarinerTutorials/mariner-docker-builder.sh --mariner_dir /path/to/CBL-Mariner -c
+
 # Use optional arguments
 ## Provide path to Mariner directory. If this option is not used, the current directory is treated as Mariner directory
 ./CBL-MarinerTutorials/build-in-container/mariner-docker-builder.sh -i --mariner_dir /path/to/CBL-Mariner/
